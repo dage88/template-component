@@ -1,0 +1,110 @@
+{
+  "folders": [
+    {
+      "path": "D:\\Workspace"
+    }
+  ],
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "C/C++: g++.exe build and debug active file (workspace.json)",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:\\Program Files\\msys64\\mingw64\\bin\\gdb.exe",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "C/C++: clang.exe build active file"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+		"label": "C/C++: clang.exe build active file",
+        "type": "cppbuild",
+        "command": "C:\\Program Files\\msys64\\mingw64\\bin\\clang.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": "build",
+        "detail": "Compiler: \"C:\\Program Files\\msys64\\mingw64\\bin\\clang.exe\""
+      },
+      {
+		"label": "C: Aktive Datei mit gcc kompilieren",
+        "type": "process",
+        "command": "C:\\Program Files\\msys64\\mingw64\\bin\\gcc.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": "build",
+        "detail": "Compiler: \"C:\\Program Files\\msys64\\mingw64\\bin\\gcc.exe\""
+      },
+      {
+		"label": "C++: Aktive Datei mit g++ kompilieren",
+        "type": "process",
+        "command": "C:\\Program Files\\msys64\\mingw64\\bin\\g++.exe",
+        "args": [
+          "-fdiagnostics-color=always",
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${fileDirname}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": "build",
+        "detail": "Compiler: \"C:\\Program Files\\msys64\\mingw64\\bin\\g++.exe\""
+      },
+	  {
+        "label": "cmake for TemplateComponent",
+        "type": "shell",
+        "command": "cmake",
+        "args": [
+			"-S",  ".",
+			"-B", "build",
+            //"-G", "'MinGW Makefiles'"
+        ],
+		"options": {
+			"cwd": "${workspaceRoot}/TemplateComponent"
+		},
+		"problemMatcher": ["$gcc"],
+        "group": "build"
+    }
+    ]
+},
+"settings": {
+	"makefile.extensionOutputFolder": "./.vscode"
+}
+}
