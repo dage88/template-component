@@ -18,7 +18,7 @@
         "environment": [],
         "externalConsole": false,
         "MIMode": "gdb",
-        "miDebuggerPath": "C:\\Program Files\\msys64\\mingw64\\bin\\gdb.exe",
+        "miDebuggerPath": "D:\\tools\\msys64\\mingw64\\bin\\gdb.exe",
         "setupCommands": [
           {
             "description": "Enable pretty-printing for gdb",
@@ -36,7 +36,7 @@
       {
 		"label": "C/C++: clang.exe build active file",
         "type": "cppbuild",
-        "command": "C:\\Program Files\\msys64\\mingw64\\bin\\clang.exe",
+        "command": "D:\\tools\\msys64\\mingw64\\bin\\clang.exe",
         "args": [
           "-fdiagnostics-color=always",
           "-g",
@@ -49,12 +49,12 @@
         },
         "problemMatcher": ["$gcc"],
         "group": "build",
-        "detail": "Compiler: \"C:\\Program Files\\msys64\\mingw64\\bin\\clang.exe\""
+        "detail": "Compiler: \"D:\\tools\\msys64\\mingw64\\bin\\clang.exe\""
       },
       {
 		"label": "C: Aktive Datei mit gcc kompilieren",
         "type": "process",
-        "command": "C:\\Program Files\\msys64\\mingw64\\bin\\gcc.exe",
+        "command": "D:\\tools\\msys64\\mingw64\\bin\\gcc.exe",
         "args": [
           "-fdiagnostics-color=always",
           "-g",
@@ -67,12 +67,12 @@
         },
         "problemMatcher": ["$gcc"],
         "group": "build",
-        "detail": "Compiler: \"C:\\Program Files\\msys64\\mingw64\\bin\\gcc.exe\""
+        "detail": "Compiler: \"D:\\tools\\msys64\\mingw64\\bin\\gcc.exe\""
       },
       {
 		"label": "C++: Aktive Datei mit g++ kompilieren",
         "type": "process",
-        "command": "C:\\Program Files\\msys64\\mingw64\\bin\\g++.exe",
+        "command": "D:\\tools\\msys64\\mingw64\\bin\\g++.exe",
         "args": [
           "-fdiagnostics-color=always",
           "-g",
@@ -85,7 +85,7 @@
         },
         "problemMatcher": ["$gcc"],
         "group": "build",
-        "detail": "Compiler: \"C:\\Program Files\\msys64\\mingw64\\bin\\g++.exe\""
+        "detail": "Compiler: \"D:\\tools\\msys64\\mingw64\\bin\\g++.exe\""
       },
 	  {
         "label": "cmake for TemplateComponent",
@@ -93,11 +93,10 @@
         "command": "cmake",
         "args": [
 			"-S",  ".",
-			"-B", "build",
-            //"-G", "'MinGW Makefiles'"
+			"-B", "build"
         ],
 		"options": {
-			"cwd": "${workspaceRoot}/TemplateComponent"
+			"cwd": "${workspaceRoot}/template-component"
 		},
 		"problemMatcher": ["$gcc"],
         "group": "build"
