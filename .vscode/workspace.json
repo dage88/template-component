@@ -34,7 +34,7 @@
     "version": "2.0.0",
     "tasks": [
       {
-		"label": "C/C++: clang.exe build active file",
+        "label": "C/C++: clang.exe build active file",
         "type": "cppbuild",
         "command": "D:\\tools\\msys64\\mingw64\\bin\\clang.exe",
         "args": [
@@ -52,7 +52,7 @@
         "detail": "Compiler: \"D:\\tools\\msys64\\mingw64\\bin\\clang.exe\""
       },
       {
-		"label": "C: Aktive Datei mit gcc kompilieren",
+        "label": "C: Aktive Datei mit gcc kompilieren",
         "type": "process",
         "command": "D:\\tools\\msys64\\mingw64\\bin\\gcc.exe",
         "args": [
@@ -70,7 +70,7 @@
         "detail": "Compiler: \"D:\\tools\\msys64\\mingw64\\bin\\gcc.exe\""
       },
       {
-		"label": "C++: Aktive Datei mit g++ kompilieren",
+        "label": "C++: Aktive Datei mit g++ kompilieren",
         "type": "process",
         "command": "D:\\tools\\msys64\\mingw64\\bin\\g++.exe",
         "args": [
@@ -87,23 +87,20 @@
         "group": "build",
         "detail": "Compiler: \"D:\\tools\\msys64\\mingw64\\bin\\g++.exe\""
       },
-	  {
+      {
         "label": "cmake for TemplateComponent",
         "type": "shell",
         "command": "cmake",
-        "args": [
-			"-S",  ".",
-			"-B", "build"
-        ],
-		"options": {
-			"cwd": "${workspaceRoot}/template-component"
-		},
-		"problemMatcher": ["$gcc"],
+        "args": ["-S", ".", "-B", "build"],
+        "options": {
+          "cwd": "${workspaceRoot}/template-component"
+        },
+        "problemMatcher": ["$gcc"],
         "group": "build"
-    }
+      }
     ]
-},
-"settings": {
-	"makefile.extensionOutputFolder": "./.vscode"
-}
+  },
+  "settings": {
+    "makefile.extensionOutputFolder": "./.vscode"
+  }
 }
