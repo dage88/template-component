@@ -16,13 +16,14 @@ set(TOOLS_FOLDER "D:/Tools/")
 
 enable_testing()
 
-add_subdirectory(${TOOLS_FOLDER}/googletest googletest)
+add_subdirectory(${TOOLS_FOLDER}/googletest googletest_build)
 
 set(HEADERS
-	code.hpp
+	template_statemachine.hpp
+	template_types.hpp
 )
 set(SOURCES
-	code.cpp
+	template_main.cpp
 )
 
 add_library(${This} STATIC ${SOURCES} ${HEADERS})

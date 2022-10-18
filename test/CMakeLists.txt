@@ -4,15 +4,18 @@ set(This TemplateCompTests)
 
 project(${This} C CXX)
 
-
+set(HEADERS
+	template_mock.hpp
+)
 set(SOURCES
-	test.cpp
+	template_test.cpp
 )
 
-add_executable(${This} ${SOURCES})
+add_executable(${This} ${SOURCES} ${HEADERS})
 
 target_link_libraries(${This} PUBLIC
 	gtest_main
+	gmock
 	TemplateComp
 )
 

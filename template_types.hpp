@@ -1,0 +1,19 @@
+#ifndef TEMPLATE_TYPES_HPP
+#define TEMPLATE_TYPES_HPP
+
+typedef enum
+{
+    STATE_UNDEFINED = 0,
+    STATE_UNINITIALIZED,
+    STATE_INITIALIZED
+} state_t;
+
+typedef enum
+{
+    EVENT_UNDEFINED = 0,
+    EVENT_NONE,
+    EVENT_INITIALIZE_REQUEST
+} event_t;
+
+
+#endif /* TEMPLATE_TYPES_HPP */
