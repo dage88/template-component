@@ -27,5 +27,6 @@ set(SOURCES
 )
 
 add_library(${This} STATIC ${SOURCES} ${HEADERS})
+add_executable(TemplateCompExec ${SOURCES} ${HEADERS})
 
 add_subdirectory(test)
