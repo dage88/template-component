@@ -15,5 +15,4 @@ typedef enum
     EVENT_INITIALIZE_REQUEST
 } event_t;
 
-
 #endif /* TEMPLATE_TYPES_HPP */

@@ -19,6 +19,7 @@ target_link_libraries(${This} PUBLIC
 	TemplateComp
 )
 
+#In VS Code, with "Ctrl+Shift+P -> Cmake: Run Tests" these tests will be executed (if CMakeLists.txt in ../ was detected)
 add_test(
 	NAME ${This}
 	COMMAND ${This}

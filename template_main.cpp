@@ -1,17 +1,19 @@
-#include "template_statemachine.hpp"
 #include <iostream>
 
-int main(){
-    StateMachine    sm;
-    event_t         event = EVENT_INITIALIZE_REQUEST;
+#include "template_statemachine.hpp"
+
+int main()
+{
+    StateMachine sm;
+    event_t event = EVENT_INITIALIZE_REQUEST;
     int counter = 0;
 
     sm.ProcessEvent(event);
 
-    while(true)
+    while (true)
     {
         counter++;
-        if (counter==0)
+        if (counter == 0)
         {
             std::cout << "Overflow.";
         }

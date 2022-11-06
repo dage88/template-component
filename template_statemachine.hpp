@@ -6,10 +6,11 @@
 class StateMachine
 {
 public:
-    StateMachine():m_state(STATE_UNINITIALIZED), m_lastEvent(EVENT_NONE){};
-    StateMachine(state_t state, event_t lastEvent) : m_state(state), m_lastEvent(lastEvent){};
+    StateMachine() : m_state(STATE_UNINITIALIZED), m_lastEvent(EVENT_NONE){};
+    StateMachine(state_t state, event_t lastEvent)
+        : m_state(state), m_lastEvent(lastEvent){};
     virtual ~StateMachine(){};
-    
+
     virtual bool ProcessEvent(event_t event);
 
 private:
@@ -19,7 +20,6 @@ private:
     bool m_acceptEvent = true;
 
 protected:
-
 };
 
 bool StateMachine::ProcessEvent(event_t event)
@@ -27,7 +27,7 @@ bool StateMachine::ProcessEvent(event_t event)
     bool success_ret = false;
     if (m_acceptEvent == true)
     {
-        //TODO statemachine logic
+        // TODO statemachine logic
         success_ret = true;
     }
     return success_ret;
