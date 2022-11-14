@@ -23,6 +23,7 @@ set(HEADERS
 	template_types.hpp
 )
 set(SOURCES
+	template_statemachine.cpp
 	template_main.cpp
 )
 

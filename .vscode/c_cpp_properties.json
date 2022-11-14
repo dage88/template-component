@@ -10,7 +10,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "D:\\tools\\msys64\\MinGW64\\bin\\gcc.exe",
+            "compilerPath": "D:\\tools\\msys64\\MinGW64\\bin\\g++.exe",
             "intelliSenseMode": "gcc-x64",
             "configurationProvider": "ms-vscode.cmake-tools"
         }

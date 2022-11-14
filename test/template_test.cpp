@@ -2,15 +2,15 @@
 #include "template_mock.hpp"
 
 // Demonstrate some basic assertions.
-TEST(TemplateTest, StatemachineAssertions)
+TEST(DefaultTestSuite, ProcessEvent_initializeRequestAfterConstruction_stateInitialized)
 {
     /* Arrange */
-    MockStateMachine mock_sm;
-    // EXPECT_CALL(object, function(Args));
-    EXPECT_CALL(mock_sm, ProcessEvent(EVENT_INITIALIZE_REQUEST));
+    bool ret;
+    StateMachine sm;
 
     /* Act */
-    // TODO
+    sm.ProcessEvent(EVENT_INITIALIZE_REQUEST);
+
     /* Assert */
-    EXPECT_EQ(1 + 1, 2) << "some really fancy calculation here";
+    EXPECT_EQ(sm.getIncomingEvent(), EVENT_INITIALIZE_REQUEST) << "Temporary test - only adjust incoming event.";
 }

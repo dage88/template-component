@@ -11,6 +11,7 @@ public:
         : m_state(state), m_lastEvent(lastEvent){};
     virtual ~StateMachine(){};
 
+    virtual event_t getIncomingEvent();
     virtual bool ProcessEvent(event_t event);
 
 private:
@@ -22,14 +23,4 @@ private:
 protected:
 };
 
-bool StateMachine::ProcessEvent(event_t event)
-{
-    bool success_ret = false;
-    if (m_acceptEvent == true)
-    {
-        // TODO statemachine logic
-        success_ret = true;
-    }
-    return success_ret;
-}
 #endif /* TEMPLATE_STATEMACHINE_HPP */
